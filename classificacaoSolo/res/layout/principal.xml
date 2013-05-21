@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutGeral"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/triangulo" >
+
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tabelaPrincipal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    </TableLayout>
+    
+
+    <LinearLayout
+         android:id="@+id/layoutClassifica"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+	
+       
+    </LinearLayout>
+
+</LinearLayout>

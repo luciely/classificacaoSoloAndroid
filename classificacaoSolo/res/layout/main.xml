@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Classificacao Textural do Solo" />
+    
+	<Button  
+		android:id="@+id/btnAreia"  
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content"  
+		android:text="Areia" 
+		android:layout_gravity="center" />
+	    
+	<Button  
+		android:id="@+id/btnSilte"  
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content"  
+		android:text="Silte"
+		android:layout_gravity="center"/>
+	
+	<Button  
+		android:id="@+id/btnArgila"  
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content"  
+		android:text="Argila"
+		android:layout_gravity="center"/>
+	
+	<Button  
+		android:id="@+id/btnClassifica"  
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content"  
+		android:text="Classificar" />
+
+</TableLayout>
