@@ -385,102 +385,102 @@ public int defuzzifica(CRegra[] prregra, int num_regra, CFuzzySolo prAreia, CFuz
 	  double vFinal, vMin, vMax = 0,vAreia,vSilte, vArgila;
 	  for(int i = 0; i < num_regra; i++)
 	  {
-		  System.out.println("Areia" + prAreia.getiConjuntos() + " - regra: " +i+ " - " + prregra[i].getiAreia() );
-		  System.out.println("Silte " + prSilte.getiConjuntos() + " - regra: " +i+  " - "+prregra[i].getiSilte() );
-		  System.out.println("Argila " + prSilte.getiConjuntos() + " - regra: " +i+  " - "+prregra[i].getiSilte() );
-	  
+		  System.out.println("Areia" + prAreia.getiConjuntos() + " - regra: " +i+ " - " + prregra[i].getiAreia());
+		  System.out.println("Silte " + prSilte.getiConjuntos() + " - regra: " +i+  " - "+prregra[i].getiSilte());
+		  System.out.println("Argila " + prSilte.getiConjuntos() + " - regra: " +i+  " - "+prregra[i].getiSilte());
+	  }
 		  //if((lAreia->conjuntos & regras[i].areia) && (lSilte->conjuntos & regras[i].silte) && (lArgila->conjuntos & regras[i].argila) )
-	    if((prAreia.getiConjuntos() & prregra[i].getiAreia()) && (prSilte.getiConjuntos() & prregra[i].getiSilte()) && (prArgila.getiConjuntos() & prregra[i].getiArgila()))
-	    {
-	      switch(prregra[i].getiAreia())
-	      {
-	        case MUITO_POUCO: 
-	          vAreia = prAreia.getdMuito_Pouco();
-	          System.out.println("Muito pouco");
-	        break;
-	        case POUCO: 
-	          vAreia = prAreia.getdPouco(); 
-	          System.out.println("Pouco");
-	        break;
-	        case MEDIO: 
-	          vAreia = prAreia.getdMedio(); 
-	          System.out.println("Medio");
-	        break;
-	        case ALTO: 
-	          vAreia = prAreia.getdAlto(); 
-	          System.out.println("Alto");
-	        break;
-	        case MUITO_ALTO: 
-	          vAreia = prAreia.getdMuito_Alto(); 
-	          System.out.println("Muito alto");
-	        break;
-	      }
-	      switch(prregra[i].getiSilte())
-	      {
-	        case MUITO_POUCO: 
-	          vSilte =  prSilte.getdMuito_Pouco();
-	          System.out.println(", Muito pouco");
-	        break;
-	        case POUCO: 
-	          vSilte = prSilte.getdPouco();
-	          System.out.println(", Pouco");
-	        break;
-	        case MEDIO: 
-	          vSilte =prSilte.getdMedio();
-	          System.out.println(", Medio");
-	        break;
-	        case ALTO: 
-	          vSilte = prSilte.getdAlto();
-	          System.out.println(", Alto");
-	        break;
-	        case MUITO_ALTO: 
-	          vSilte = prSilte.getdMuito_Alto(); 
-	          System.out.println(", Muito alto");
-	        break;
-	      }
-	      switch(prregra[i].getiArgila())
-	      {
-	        case MUITO_POUCO: 
-	          vArgila = prArgila.getdMuito_Pouco();
-	          System.out.println(", Muito pouco: ");
-	        break;
-	        case POUCO: 
-	          vArgila = prArgila.getdPouco(); 
-	          System.out.println(", Pouco: ");
-	        break;
-	        case MEDIO: 
-	          vArgila = prArgila.getdMedio();
-	          System.out.println(", Medio: ");
-	        break;
-	        case ALTO: 
-	          vArgila = prArgila.getdAlto();
-	          System.out.println(", Alto: ");
-	        break;
-	        case MUITO_ALTO: 
-	          vArgila =prArgila.getdMuito_Alto();
-	          System.out.println(", Muito alto: ");
-	        break;
-	      }
-	      System.out.println(sSolo[regras[i].getiSolo()]);
-	      vMin = minimo(vAreia, vSilte);
-	      vMin = minimo(vMin, vArgila);
-	      
-	      if(iClassificacao < 0)
-	      {
-	        vFinal = vMin;
-	        i = regras[i].getiSolo();
-	      }
-	        
-	      if(vFinal < vMin)
-	      {
-	        vFinal = vMin;
-	        iClassificacao = regras[i].getiSolo();
-	      }
-	        
-	    } // fim do if
-	    
-	  } // fim do for
-	  return iClassificacao;	
+//	    if((prAreia.getiConjuntos() & prregra[i].getiAreia()) && (prSilte.getiConjuntos() & prregra[i].getiSilte()) && (prArgila.getiConjuntos() & prregra[i].getiArgila()))
+//	    {
+//	      switch(prregra[i].getiAreia())
+//	      {
+//	        case MUITO_POUCO: 
+//	          vAreia = prAreia.getdMuito_Pouco();
+//	          System.out.println("Muito pouco");
+//	        break;
+//	        case POUCO: 
+//	          vAreia = prAreia.getdPouco(); 
+//	          System.out.println("Pouco");
+//	        break;
+//	        case MEDIO: 
+//	          vAreia = prAreia.getdMedio(); 
+//	          System.out.println("Medio");
+//	        break;
+//	        case ALTO: 
+//	          vAreia = prAreia.getdAlto(); 
+//	          System.out.println("Alto");
+//	        break;
+//	        case MUITO_ALTO: 
+//	          vAreia = prAreia.getdMuito_Alto(); 
+//	          System.out.println("Muito alto");
+//	        break;
+//	      }
+//	      switch(prregra[i].getiSilte())
+//	      {
+//	        case MUITO_POUCO: 
+//	          vSilte =  prSilte.getdMuito_Pouco();
+//	          System.out.println(", Muito pouco");
+//	        break;
+//	        case POUCO: 
+//	          vSilte = prSilte.getdPouco();
+//	          System.out.println(", Pouco");
+//	        break;
+//	        case MEDIO: 
+//	          vSilte =prSilte.getdMedio();
+//	          System.out.println(", Medio");
+//	        break;
+//	        case ALTO: 
+//	          vSilte = prSilte.getdAlto();
+//	          System.out.println(", Alto");
+//	        break;
+//	        case MUITO_ALTO: 
+//	          vSilte = prSilte.getdMuito_Alto(); 
+//	          System.out.println(", Muito alto");
+//	        break;
+//	      }
+//	      switch(prregra[i].getiArgila())
+//	      {
+//	        case MUITO_POUCO: 
+//	          vArgila = prArgila.getdMuito_Pouco();
+//	          System.out.println(", Muito pouco: ");
+//	        break;
+//	        case POUCO: 
+//	          vArgila = prArgila.getdPouco(); 
+//	          System.out.println(", Pouco: ");
+//	        break;
+//	        case MEDIO: 
+//	          vArgila = prArgila.getdMedio();
+//	          System.out.println(", Medio: ");
+//	        break;
+//	        case ALTO: 
+//	          vArgila = prArgila.getdAlto();
+//	          System.out.println(", Alto: ");
+//	        break;
+//	        case MUITO_ALTO: 
+//	          vArgila =prArgila.getdMuito_Alto();
+//	          System.out.println(", Muito alto: ");
+//	        break;
+//	      }
+//	      System.out.println(sSolo[regras[i].getiSolo()]);
+//	      vMin = minimo(vAreia, vSilte);
+//	      vMin = minimo(vMin, vArgila);
+//	      
+//	      if(iClassificacao < 0)
+//	      {
+//	        vFinal = vMin;
+//	        i = regras[i].getiSolo();
+//	      }
+//	        
+//	      if(vFinal < vMin)
+//	      {
+//	        vFinal = vMin;
+//	        iClassificacao = regras[i].getiSolo();
+//	      }
+//	        
+//	    } // fim do if
+//	    
+//	  }  fim do for
+	 return iClassificacao;	
 }
 
 	public void onClick(View v) {
