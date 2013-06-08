@@ -149,7 +149,7 @@ public class ClassificacaoSolo extends Activity implements OnClickListener
 
 		}
 }
-	
+	//teste
 	//cria caixa de dialogo de login de acesso
 		protected Dialog onCreateDialog(int id) {
 
