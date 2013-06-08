@@ -12,8 +12,10 @@ import android.opengl.GLSurfaceView;
 import android.opengl.GLSurfaceView.Renderer;
 import android.opengl.GLUtils;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 public class ResultaCalculo extends Activity
 {
@@ -42,6 +44,10 @@ public class ResultaCalculo extends Activity
 				
 		setPegaResultado((Integer) getIntent().getSerializableExtra("valor"));		
 		setContentView(vrSuperficieDesenho);
+		
+		Toast toast = Toast.makeText(ResultaCalculo.this, "A classificação textural do solo é: Argilosa.",  Toast.LENGTH_SHORT);
+		toast.setGravity(Gravity.TOP | Gravity.CENTER_VERTICAL, 0, 0);
+		toast.show();
 		
 }
 
@@ -97,7 +103,7 @@ class RenderInicio implements Renderer
 //		Tiro2 = new ArrayList<CSpriteFundo>(); 
 //		Over = new CSpriteFundo[1];
 
-		planoFundo[0] = new CSpriteFundo(800, 470, 800, 470, 1, vrActivity);
+		planoFundo[0] = new CSpriteFundo(700, 500, 700, 500, 1, vrActivity);
 		planoFundo[0].iQuadroAtual =0;
 
 		Ponto[0] = new CSpriteFundo(24,24 , 48, 24, 2, vrActivity);
@@ -155,7 +161,7 @@ class RenderInicio implements Renderer
 		planoFundo[0].iY =0;
 		//planoFundo[0].iX = vrActivity.vrSuperficieDesenho.getWidth();
 		//planoFundo[0].iY = vrActivity.vrSuperficieDesenho.getHeight();	     
-		planoFundo[0].setCodTextura(carregaImagem(vrOpenGl, R.drawable.trian));
+		planoFundo[0].setCodTextura(carregaImagem(vrOpenGl, R.drawable.tringu));
 
 		Ponto[0].criaQuadros(vrOpenGl);
 //		Nave[0].iX = 0;
@@ -235,13 +241,15 @@ class RenderInicio implements Renderer
         vrOpenGl.glBindTexture(GL10.GL_TEXTURE_2D, Ponto[0].iCodTextura);
 		Ponto[0].desenhaSprite(vrOpenGl);
 		//vrOpenGl.glDisable(GL10.GL_TEXTURE_2D);
-		
+		String teste = "A classificação textural do solo é: Argilosa.";
+		//Toast.makeText(ResultaCalculo, "Muito Pouco", Toast.LENGTH_SHORT).show();
+	
 		try {	
 			Thread.sleep(500);
 			if(Ponto[0].iQuadroAtual==0)
 			{
 				Ponto[0].iQuadroAtual =1;
-			}
+							}
 			else
 				Ponto[0].iQuadroAtual =0;
 			} catch (InterruptedException e) {

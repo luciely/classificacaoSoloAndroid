@@ -7,7 +7,7 @@
     <uses-sdk android:minSdkVersion="10" />
 
     <application
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name" >
         <activity
             android:name=".ClassificacaoSolo"
@@ -22,6 +22,12 @@
         
         <activity
             android:name=".ResultaCalculo"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">    
+        </activity>
+        
+          <activity
+            android:name="SeekBar"
             android:label="@string/app_name" 
             android:screenOrientation="portrait">    
         </activity>
